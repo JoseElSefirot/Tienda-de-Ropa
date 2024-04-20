@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tienda_de_Ropa
+namespace Tienda_de_Ropa.Vistas
 {
-    public partial class Frm : Form
+    public partial class FrmProductos : Form
     {
-        public Frm()
+        public FrmProductos()
         {
             InitializeComponent();
         }
