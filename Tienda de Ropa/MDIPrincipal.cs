@@ -128,5 +128,12 @@ namespace Tienda_de_Ropa
             frmProveedores.MdiParent = this;
             frmProveedores.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos= new FrmProductos();
+            frmProductos.MdiParent = this;
+            frmProductos.Show();
+        }
     }
 }

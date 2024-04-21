@@ -173,7 +173,7 @@ namespace Tienda_de_Ropa.Clases.clases
             try
             {
                 sqlConexion = new Conexion().ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("ActualizarUsuario", sqlConexion);
+                MySqlCommand comando = new MySqlCommand("ActualizarUsuarios", sqlConexion);
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.Add("@id", MySqlDbType.Int32).Value = idTUsuarios;
                 comando.Parameters.Add("@NomUsuario", MySqlDbType.VarChar).Value = usuario.NomUsuario;
@@ -181,6 +181,7 @@ namespace Tienda_de_Ropa.Clases.clases
                 comando.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = usuario.contrasena;
                 comando.Parameters.Add("@TPrmisos_idTPrmisos", MySqlDbType.Int32).Value = usuario.TPrmisos_idTPrmisos;
                 comando.Parameters.Add("@TEstado_idTEstado", MySqlDbType.Int32).Value = usuario.TEstado_idTEstado;
+
                 sqlConexion.Open();
                 if (comando.ExecuteNonQuery() == 1)
                 {
